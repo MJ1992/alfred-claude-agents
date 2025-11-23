@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "alfred": "tsx alfred-agent.ts",
-    "batman": "tsx batman-multiagent.ts",
+    "multiagent": "tsx alfred-multiagent.ts",
     "start": "tsx alfred-agent.ts"
   },
   "devDependencies": {

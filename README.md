@@ -3,7 +3,7 @@
 This repository contains two examples demonstrating different capabilities of the Claude Agent SDK:
 
 1. **Alfred Agent** - A simple party planning assistant
-2. **Batman Multi-Agent System** - A hierarchical multi-agent system for complex tasks
+2. **Alfred Multi-Agent System** - A hierarchical multi-agent system for complex tasks
 
 ## Projects
 
@@ -17,7 +17,7 @@ Alfred is Wayne Manor's ultimate party planning assistant. He helps plan parties
 - 🏢 Catering service recommendations in Gotham City
 - 🎭 Superhero-themed party idea generation
 
-### 🦇 Batman Multi-Agent System - Filming Locations
+### 🦇 Alfred Multi-Agent System - Filming Locations
 
 A hierarchical multi-agent system that demonstrates advanced coordination patterns. A Manager Agent delegates web research tasks to a Web Search Agent, calculates travel times, and generates interactive map visualizations.
 
@@ -53,13 +53,13 @@ npm start
 npm run alfred
 ```
 
-### Batman Multi-Agent System
+### Alfred Multi-Agent System
 ```bash
 # Run the multi-agent system
-npm run batman
+npm run multiagent
 ```
 
-**Note:** The Batman system requires Python 3.x with pip installed. The agent will automatically install required Python packages (`plotly`, `pandas`, `kaleido`) during execution.
+**Note:** The multi-agent system requires Python 3.x with pip installed. The agent will automatically install required Python packages (`plotly`, `pandas`, `kaleido`) during execution.
 
 ## Project Structure
 
@@ -67,16 +67,19 @@ npm run batman
 - **`tools.ts`** - Custom MCP tools for party planning
 - **`alfred-agent.ts`** - Main agent implementation
 
-### Batman Multi-Agent System
+### Alfred Multi-Agent System
 - **`cargo-travel-tool.ts`** - Haversine distance calculation tool
-- **`batman-multiagent.ts`** - Multi-agent orchestration
-- **`MULTIAGENT.md`** - Detailed multi-agent documentation
+- **`alfred-multiagent.ts`** - Multi-agent orchestration
 
 ## Requirements
 
 - Node.js v20 or higher
 - Anthropic API key
-- Python 3.x with pip (required for Batman Multi-Agent System only)
+- Python 3.x with pip (required for Alfred Multi-Agent System only)
+
+## Documentation
+
+- **Agent SDK Reference** - See `docs/agent-sdk.md` for complete TypeScript SDK API reference
 
 ## Learn More
 

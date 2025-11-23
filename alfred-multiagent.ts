@@ -3,7 +3,7 @@ import type { SDKMessage } from '@anthropic-ai/claude-agent-sdk';
 import { calculateCargoTravelTime } from './cargo-travel-tool';
 
 /**
- * Multi-Agent Batman Filming Locations System
+ * Alfred Multi-Agent System - Filming Locations
  * 
  * This implements a hierarchical multi-agent system where:
  * - A Manager Agent coordinates the overall task
@@ -65,7 +65,7 @@ function handleResultMessage(message: Extract<SDKMessage, { type: 'result' }>) {
 // ============================================================================
 // Main Multi-Agent Runner
 // ============================================================================
-async function runBatmanMultiAgent() {
+async function runAlfredMultiAgent() {
   // Create an SDK MCP server with the cargo travel time tool
   const cargoToolServer = createSdkMcpServer({
     name: 'cargo-tools',
@@ -73,7 +73,7 @@ async function runBatmanMultiAgent() {
     tools: [calculateCargoTravelTime],
   });
 
-  console.log('🦇 Batman Filming Locations Multi-Agent System\n');
+  console.log('🦇 Alfred Multi-Agent System - Filming Locations\n');
   
   const task = `Find all Batman filming locations in the world, calculate the time to transfer via cargo plane to here (we're in Gotham, 40.7128° N, 74.0060° W).
 Also give me some supercar factories with the same cargo plane transfer time. You need at least 6 points in total.
@@ -200,7 +200,7 @@ For the map visualization:
 }
 
 // Run the multi-agent system
-runBatmanMultiAgent().catch((error) => {
+runAlfredMultiAgent().catch((error) => {
   console.error('\n💥 Fatal error:', error);
   process.exit(1);
 });
